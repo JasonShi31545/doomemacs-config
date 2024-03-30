@@ -1,7 +1,6 @@
 ;; $DOOMDIR/config.el -*- lexical-binding: t; -*-
 
-;; Place your private configuration here! Remember, you do not need to run 'doom
-;; sync' after modifying this file!
+;; Place your private configuration here! Remember, you do not need to run 'doom sync' after modifying this file!
 
 
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
@@ -89,6 +88,9 @@
 
 ;; Ace Window
 ;; (global-set-key (kbd "M-o") #'ace-window)
+
+;; Goto Line
+(global-set-key (kbd "M-g M-g") 'goto-line)
 
 ;; Other window settings
 (global-set-key (kbd "C-}") #'enlarge-window-horizontally)

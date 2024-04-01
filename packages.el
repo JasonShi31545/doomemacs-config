@@ -71,3 +71,4 @@
 (package! fireplace)
 (package! astyle)
 (package! clang-format)
+(package! yasnippet-snippets)

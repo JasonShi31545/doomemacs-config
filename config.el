@@ -65,6 +65,14 @@
       make-backup-files t)
 (setq backup-directory-alist '(("." . "~/.emacsbkups")))
 
+;; Exec Path From Shell Setup
+
+(when (memq window-system '(mac ns x))
+    (exec-path-from-shell-initialize))
+
+(when (daemonp)
+    (exec-path-from-shell-initialize))
+
 ;; Case sensitive search/replace
 (setq case-fold-search nil)
 (smex-initialize)

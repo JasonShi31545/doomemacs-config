@@ -73,4 +73,5 @@
 (package! astyle)
 (package! clang-format)
 (package! yasnippet-snippets)
+(package! nov)
 (package! exec-path-from-shell)

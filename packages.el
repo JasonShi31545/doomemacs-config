@@ -75,3 +75,5 @@
 (package! yasnippet-snippets)
 (package! nov)
 (package! exec-path-from-shell)
+(package! copilot
+  :recipe (:host github :repo "copilot-emacs/copilot.el" :files ("*.el")))

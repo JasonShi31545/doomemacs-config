@@ -21,7 +21,7 @@
 ;; (setq doom-font (font-spec :family "monospace" :size 12 :weight 'semi-light)
 ;;       doom-variable-pitch-font (font-spec :family "sans" :size 13))
 
-(setq doom-font (font-spec :family "Fira Code" :size 18 :weight 'regular)
+(setq doom-font (font-spec :family "Iosevka" :size 18 :weight 'regular)
       doom-variable-pitch-font (font-spec :family "sans" :size 16))
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
@@ -145,3 +145,14 @@
 ;; (add-hook 'evil-god-state-entry-hook (lambda () (diminish 'god-local-mode)))
 ;; (add-hook 'evil-god-state-exit-hook (lambda () (diminish-undo 'god-local-mode)))
 ;; (evil-define-key 'god global-map [escape] 'evil-god-state-bail)
+
+;; COPILOT
+
+;; accept completion from copilot and fallback to company
+(use-package! copilot
+  :hook (prog-mode . copilot-mode)
+  :bind (:map copilot-completion-map
+              ("<tab>" . 'copilot-accept-completion)
+              ("TAB" . 'copilot-accept-completion)
+              ("C-TAB" . 'copilot-accept-completion-by-word)
+              ("C-<tab>" . 'copilot-accept-completion-by-word)))
